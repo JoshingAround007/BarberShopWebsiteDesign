@@ -238,32 +238,178 @@ body.is-preload *:after {
 
 /* Footer row fix */
 .footer-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* makes both headers align at the top */
-  gap: 40px;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	/* makes both headers align at the top */
+	gap: 40px;
+	flex-wrap: wrap;
+	/* allows wrapping on small screens */
+	margin-bottom: 20px;
 }
 
 .footer-section {
-  flex: 1 1 200px; /* each takes equal space, but can shrink */
-  min-width: 200px; /* prevents squishing too much */
+	flex: 1 1 200px;
+	/* each takes equal space, but can shrink */
+	min-width: 200px;
+	/* prevents squishing too much */
 }
 
 /* Mobile view: stack neatly */
 @media screen and (max-width: 768px) {
-  .footer-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+	.footer-row {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 
-  .footer-section {
-    flex: unset;
-    width: 100%;
-  }
+	.footer-section {
+		flex: unset;
+		width: 100%;
+	}
 }
+
+.hours-card {
+	background: #f7f7f7;
+	/* light background */
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hours-card h2 {
+	margin-bottom: 15px;
+	font-size: 1.5em;
+}
+
+.hours-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.hours-table td {
+	padding: 8px 12px;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+}
+
+.hours-table tr:last-child td {
+	border-bottom: none;
+}
+
+.contact-info {
+	margin: 20px 0;
+	font-size: 1.1em;
+}
+
+.contact-info a {
+	color: #e63946;
+	/* accent color (red-ish) */
+	text-decoration: none;
+}
+
+.contact-info a:hover {
+	text-decoration: underline;
+}
+
+/* Slider container */
+.swiper {
+	width: 90%;
+	/* Responsive width */
+	max-width: 900px;
+	/* Limit size on large screens */
+	margin: 40px auto;
+	/* Center slider */
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	background-color: #fff;
+	overflow: hidden;
+}
+
+/* Slides */
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+	/* fill slide width */
+	height: auto;
+	/* keep aspect ratio */
+	max-height: 600px;
+	/* taller images */
+	object-fit: contain;
+	border-radius: 8px;
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+	bottom: 10px;
+	/* Default Swiper position */
+}
+
+/* Hide navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+	display: none;
+}
+
+/* Hide pagination dots */
+.swiper-pagination {
+	display: none;
+}
+
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+	background: #bbb;
+	border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+	background: #333;
+}
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+	color: #333;
+	background: #f1f1f1;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+	background: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+	.swiper {
+		width: 90%;
+	}
+
+	.swiper-slide img {
+		max-height: 300px;
+	}
+}
+
+
+
+
+
+
+
 
 
 
